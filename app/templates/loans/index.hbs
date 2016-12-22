@@ -1,0 +1,19 @@
+<h2>Loans Index</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Borrowed since</th>
+			<th>Created</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each model as |loan|}}
+			{{loans/loans-row
+			loan=loan
+			save=(action save)
+			}}
+		{{/each}}
+	</tbody>
+</table>

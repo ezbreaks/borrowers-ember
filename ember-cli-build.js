@@ -20,5 +20,26 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('vendor/fontello/fontello.css');
+  app.import('vendor/fontello/font/fontello.ttf', {
+    destDir: 'assets/font'
+  });
+  app.import('vendor/fontello/font/fontello.eot', {
+    destDir: 'assets/font'
+  });
+  app.import('vendor/fontello/font/fontello.svg', {
+    destDir: 'assets/font'
+  });
+  app.import('vendor/fontello/font/fontello.woff', {
+    destDir: 'assets/font'
+  });
+  app.import('vendor/fontello/font/fontello.woff2', {
+    destDir: 'assets/font'
+  });
+  // app.import('vendor/normalize.css');
+  app.import('vendor/basscss.min.css');
+  // app.import('bower_components/moment/moment.js');
+  // app.import('bower_components/ic-ajax/dist/named-amd/main.js');
+
   return app.toTree();
 };

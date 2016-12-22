@@ -1,0 +1,31 @@
+<h1>Friends Index</h1>
+<h3>Total friends: {{model.length}}</h3>
+
+
+
+<table class="mt3 fit">
+	<thead class="p1 h2">
+		<tr class="white bg-blue">
+			<th {{action setSortBy 'firstName'}}>Name</th>
+			<th {{action setSortBy 'totalLoans'}}>Loans</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody class="p2">
+		{{#each model as |friend|}}
+			<tr>
+				<td class="border-bottom">
+					{{link-to friend.fullName 'loans' friend.id }}
+				</td>
+				<td>{{ friend.loans.length }}</td>
+				<td class="border-bottom">
+
+					{{link-to 'Lend Article' 'loans.new' friend }}
+
+					<a href="#" {{action "delete" friend }}>Delete</a>
+				</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
